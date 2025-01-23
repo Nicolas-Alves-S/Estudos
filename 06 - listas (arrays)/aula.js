@@ -16,3 +16,4 @@ const media = soma / notas.length;
 console.log(media);
 
 
+dddd
