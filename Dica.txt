@@ -1,0 +1,6 @@
+Pra fazer atualizacao precisa usar esses codigo
+
+git add "Se tiver pasta coloca assim/nome do arquivo.js"
+
+adicione o comentario
+git commit -m "Atualiza aula.js com melhorias nas listas (arrays)"
