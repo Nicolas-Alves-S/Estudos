@@ -10,3 +10,4 @@ for (let i = 0; i < numeros.length; i++) {
     }
 
 }
+//basicamente o codigo funciona assim se o numero se o numero ficar inteiro dividido por 2 ele é par ai vc imprime le se nao so continua.
