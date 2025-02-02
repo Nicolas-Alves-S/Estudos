@@ -1,19 +1,34 @@
-const pokeApi ={}
-pokeApi.getPokemons =(offset =0,limit =10)=>{
-    //const offset = 0;//aqui estou definido a variavel como 0
-    //const limit = 10;//aqui estou definido a variavel como 10
-    //defini as variavel que futuramente posso fazer mais pagina puxando as informacoes da api com essa variavel.
-    const url = `https://pokeapi.co/api/v2/pokemon?offset${offset}&limit=${limit}`
+const pokeApi = {}//definino a variavel 
 
-    return fetch(url) // Aqui estou fazendo a requisição para a API usando a URL fornecida
-    .then((response) => response.json()) // Aqui verifico se a requisição foi bem-sucedida e converto a resposta para JSON
-    .then((jsonBody)=>jsonBody.results)
-    .then((pokemons)=>pokemons.map((pokemons) =>fetch(pokemons.url).json()))
-    .then((detailRequests) =>Promise.all(detailRequests))//lista de promeca sendo resolvida
+function convertPokeApiDetailToPokemon(pokeDetail) {//aqui estou pegando as informacoes
+    const pokemon = new Pokemon()
+    pokemon.number = pokeDetail.id//aqui ta puxando o numero dele com o caminho que estar localizado o numero 
+    pokemon.name = pokeDetail.name
+
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
+    const [type] = types
+
+    pokemon.types = types
+    pokemon.type = type
+
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+
+    return pokemon
 }
-Promise.all([
-    fetch('https://pokeapi.co/api/v2/pokemon/1'),
-    fetch('https://pokeapi.co/api/v2/pokemon/2'),
-    fetch('https://pokeapi.co/api/v2/pokemon/3'),
-    fetch('https://pokeapi.co/api/v2/pokemon/4')
-])
+pokeApi.getPokemonsDetails = (pokemon) => {//aqui ta trasformando o que foi puxado la em cima como tabela
+    return fetch(pokemon.url)
+    .then((response) => response.json())
+    .then(convertPokeApiDetailToPokemon)
+}
+
+pokeApi.getPokemons = (offset = 0, limit = 10) => {
+    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+
+    return fetch(url)
+        .then((response) => response.json())
+        .then((jsonBody) => jsonBody.results) // Evita erro caso results seja undefined        
+        .then((pokemons) => pokemons.map(pokeApi.getPokemonsDetails))
+        .then((detailRequests) => Promise.all(detailRequests))
+        .then((pokemonsDetails) => pokemonsDetails)
+}
+

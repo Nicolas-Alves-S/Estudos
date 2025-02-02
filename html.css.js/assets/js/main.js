@@ -4,17 +4,17 @@ const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon">
-            <span class="numero">#001</span>
+        <li class="pokemon ${pokemon.type}"><!-- Aqui seria eu pegando o tipo do pokemon--!>
+            <span class="numero">#${pokemon.number}</span>
             <span class="nome">${pokemon.name}</span>
 
             <div class="detali">
                 <ol class="types">
-                    <li class="type">Grass</li>
-                    <li class="type">Poison</li>
+                ${pokemon.types.map((type) => 
+                    `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
-                <img src="https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2014/08/bulbasaur.png?fit=958%2C834&ssl=1"
-                alt="${pokemon.name}">
+                <img src="${pokemon.photo}"
+                     alt="${pokemon.name}">
             </div>
         </li>
     `;
