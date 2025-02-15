@@ -30,7 +30,11 @@ pokeApi.getPokemonsDetails = (pokemon) => {
         .then(convertPokeApiDetailToPokemon) // Convertendo os dados para o modelo Pokemon
 }
 
+<<<<<<< HEAD
 pokeApi.getPokemons = (offset = 0, limit = 30) => {
+=======
+pokeApi.getPokemons = (offset = 0, limit = 5) => {
+>>>>>>> 01cf3b3 (Atualização)
     // Criando a URL para buscar uma lista de Pokémons com base no offset e limite
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
