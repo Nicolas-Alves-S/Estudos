@@ -4,29 +4,19 @@
 }
 
 body {
-<<<<<<< HEAD
-    background-color: #f6f8fc;
-=======
     background-color:#3f3f3f;
 
->>>>>>> 01cf3b3 (Atualização)
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-<<<<<<< HEAD
-    background-color: #fff;
-}
-
-=======
     background-color: #191919;
 }
 
 
 
->>>>>>> 01cf3b3 (Atualização)
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
