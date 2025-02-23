@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado Piano</title>
+    <link rel="stylesheet" href="/Teclado Piano/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+          <h2>Piano Virtual</h2>
+          <div class="column volume-slider">
+            <span>Volume</span> <input type="range" min="0" max="1" value="0.5" step="any">
+          </div>
+          <div class="column teclas-check">
+            <span>Teclas</span> <input type="checkbox" checked>
+          </div>
+        </header>
+        <ul class="piano-teclas">
+          <li class="tecla branca" data-tecla="a"><span>a</span></li>
+          <li class="tecla preta" data-tecla="w"><span>w</span></li>
+          <li class="tecla branca" data-tecla="s"><span>s</span></li>
+          <li class="tecla preta" data-tecla="e"><span>e</span></li>
+          <li class="tecla branca" data-tecla="d"><span>d</span></li>
+          <li class="tecla preta" data-tecla="f"><span>f</span></li>
+          <li class="tecla branca" data-tecla="t"><span>t</span></li>
+          <li class="tecla preta" data-tecla="g"><span>g</span></li>
+          <li class="tecla branca" data-tecla="y"><span>y</span></li>
+          <li class="tecla preta" data-tecla="h"><span>h</span></li>
+          <li class="tecla branca" data-tecla="u"><span>u</span></li>
+          <li class="tecla preta" data-tecla="j"><span>j</span></li>
+          <li class="tecla branca" data-tecla="k"><span>k</span></li>
+          <li class="tecla preta" data-tecla="o"><span>o</span></li>
+          <li class="tecla branca" data-tecla="l"><span>l</span></li>
+          <li class="tecla preta" data-tecla="p"><span>p</span></li>
+          <li class="tecla branca" data-tecla=";"><span>;</span></li>
+        </ul>
+      </div>
+    
+      <script src="./assets/js/main.js" defer></script>
+    
+</body>
+</html>
