@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedra papel tesoura</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./src/assets/favicon/logo (2).png" type="image/x-icon">
+
+
+  <!-- reset css -->
+  <link rel="stylesheet" href="./src/styles/reset.css">
+
+  <!-- framework -->
+  <link rel="stylesheet" href="./src/styles/buttons.css">
+  <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
+
+  <!-- main style -->
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+
+<body>
+  <audio id="bgm" loop>
+    <source src="./src/assets/audios/Iframe Post Malone - Congratulations (Official Music Video) ft. Quavo [SC4xMk98Pdc] (1).mp3" type="audio/mp3" 
+    style="filter: brightness(0.5);"/>
+  </audio>
+  <div class="bg-video">
+    <iframe class="video" 
+      src="https://www.youtube.com/embed/9XCyKtFsYbg?autoplay=1&loop=1&mute=1&playlist=9XCyKtFsYbg&vq=hd1080" 
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+  
+  <div class="container">
+    <div class="container__left framed-golden-2">
+      <div class="score_box frame">
+        <img src="./src/assets/icons/audio.png" id="audio-player" class="inactive">
+
+        <span id="score_points">Vitoria: 0 | Derrota: 0</span>
+
+        <span></span>
+      </div>
+      <div class="menu_avatar">
+        <img id="card-image">
+      </div>
+      <div class="card_details frame">
+        <p id="card-name">Selecione</p>
+        <p id="card-type">uma carta</p>
+      </div>
+    </div>
+    <div class="container__right">
+      <div class="card-box__container">
+        <div class="card-box framed" id="computer-cards"></div>
+        <div class="card-versus__container">
+          <div class="versus-top">
+            <div class="card-infield">
+              <img id="player-field-card" height="180px" width="125px">
+            </div>
+           
+            <div class="card-infield">
+              <img id="computer-field-card" height="180px" width="125px">
+            </div>
+          </div>
+          <div class="versus-bottom">
+            <button id="next-duel" class="boton-elegante" onclick="resetDuel()">
+              GANHOU
+            </button>
+          </div>
+        </div>
+        <div class="card-box framed" id="player-cards"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./src/scripts/engine.js" defer></script>
+</body>
+
+</html>

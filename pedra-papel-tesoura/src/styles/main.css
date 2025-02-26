@@ -1,0 +1,167 @@
+body {
+  cursor: url("../assets/cursor/yugicursor.png"), default;
+}
+
+#audio-player {
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s;
+
+}
+
+#audio-player:hover {
+  transform: scale(1.2);
+}
+
+.active {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.3;
+}
+
+button,
+button:hover,
+img:hover,
+a,
+a:hover {
+  cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 250%;
+  top: -100px;
+  overflow: hidden;
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%); /* Centraliza o vídeo */
+}
+
+
+.container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  height: 100vh;
+}
+
+.container__left {
+  width: 35%;
+  min-width: 300px;
+  height: 70%;
+  display: flex;
+  margin-top: 7%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.container__right {
+  width: 65%;
+}
+
+.score_box {
+  background-color: #ffffff;
+  opacity: 0,2;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.frame {
+  border: 3px solid #b6b6b6;
+  border-radius: 5px;
+}
+
+.card_details {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  width: 100%;
+}
+
+#card-name {
+  font-size: 0.8rem;
+}
+
+#card-type {
+  font-size: 1rem;
+}
+
+.card-box__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+.card-versus__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.3rem;
+  height: 300px;
+  align-items: center;
+}
+
+.versus-top,
+.versus-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.versus-bottom {
+  margin-top: 1rem;
+}
+
+#next-duel {
+  display: none;
+}
+
+.card-box {
+  height: 9rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-infield {
+  height: 11.2rem;
+  width: 8rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+.card {
+  transition: all 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
