@@ -1,0 +1,100 @@
+@import url("./reset.css");
+@import url("./global.css");
+@import url("./components/navigator.css");
+@import url("./components/pills.css");
+@import url("./components/link_button.css");
+@import url("./components/gallery.css");
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+}
+
+.wrapper video {
+    position: fixed;
+    width: 100%;
+}
+
+.wrapper .wrapper__left__column {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.wrapper .wrapper__main__content {
+    height: 100%;
+    width: 100%;
+    padding-left: 130px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.wrapper .wrapper__main__content .main__content__top {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo img {
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 15px;
+    width: 40vw;
+    height: 15vh;
+}
+
+.description {
+    background-color: rgba(0, 0, 0, .7);
+    max-width: 65%;
+    min-height: 35vh;
+    max-height: 100vh;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    overflow-y: auto;
+    font-size: 14px !important;
+}
+
+.wrapper .main__content__top .description .description__text p {
+    color: #FFF;
+    line-height: 1.75%;
+}
+
+.wrapper .wrapper__main__content .links {
+    margin-top: 10px;
+}
+
+.wrapper .wrapper__main__content .links ul {
+    display: flex;
+}
+
+.main__content__bottom {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.spiderman-01-01 {
+    background-image: url("../images/spiderman-tobey/movie-01/background.png");
+    background-size: cover;
+}
+
+.spiderman-01-02 {
+    background-image: url("../images/spiderman-tobey/movie-02/background.png");
+    background-size: cover;
+}
+
+.spiderman-01-03 {
+    background-image: url("../images/spiderman-tobey/movie-03/background.png");
+    background-size: cover;
+}
